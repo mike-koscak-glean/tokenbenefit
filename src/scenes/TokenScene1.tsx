@@ -144,7 +144,7 @@ export function TokenScene1() {
         animate={showSubtitle ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
         transition={{ duration: 0.6 }}
       >
-        Two architectures. Same question. Wildly different token costs.
+        Two architectures. Same question. Wildly different token consumption.
       </motion.div>
     </div>
   );
