@@ -37,7 +37,6 @@ const RESULT_CARDS = [
 const CAPTIONS = [
   '60+ ranking signals score every candidate',
   'Only verified, relevant results reach the LLM',
-  'Fewer tokens. Better answers.',
 ];
 
 export function TokenScene3() {
@@ -221,7 +220,7 @@ export function TokenScene3() {
         {/* Captions */}
         <div className="ts3-captions">
           {CAPTIONS.map((caption, i) => {
-            const showAt = i === 0 ? 2 : i === 1 ? 3 : 5;
+            const showAt = i === 0 ? 2 : 3;
             return phase >= showAt ? (
               <motion.div
                 key={i}
@@ -235,6 +234,17 @@ export function TokenScene3() {
             ) : null;
           })}
         </div>
+
+        {phase >= 5 && (
+          <motion.div
+            className="ts3-hero-line"
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 14 }}
+          >
+            Fewer tokens. Better answers.
+          </motion.div>
+        )}
       </div>
     </div>
   );

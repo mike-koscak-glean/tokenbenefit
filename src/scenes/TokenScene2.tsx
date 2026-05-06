@@ -60,7 +60,6 @@ const ALL_TOKENS = generateTokens();
 const CAPTIONS = [
   'Every tool returns everything it can find',
   'No cross-source ranking. No deduplication.',
-  'The LLM pays for all of it.',
 ];
 
 export function TokenScene2() {
@@ -234,7 +233,7 @@ export function TokenScene2() {
 
         <div className="ts2-captions">
           {CAPTIONS.map((caption, i) => {
-            const showAt = i === 0 ? 2 : i === 1 ? 3 : 4;
+            const showAt = i === 0 ? 2 : 3;
             return phase >= showAt ? (
               <motion.div
                 key={i}
@@ -248,6 +247,17 @@ export function TokenScene2() {
             ) : null;
           })}
         </div>
+
+        {phase >= 4 && (
+          <motion.div
+            className="ts2-hero-line"
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 14 }}
+          >
+            The LLM pays for all of it.
+          </motion.div>
+        )}
       </div>
     </div>
   );

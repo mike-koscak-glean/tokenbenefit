@@ -6044,6 +6044,16 @@
   padding-left: 16px;
 }
 
+.ts2-hero-line {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--glean-orange);
+  text-shadow: 0 0 30px rgba(255, 126, 76, 0.4), 0 0 60px rgba(255, 126, 76, 0.15);
+  letter-spacing: -0.3px;
+  flex-shrink: 0;
+}
+
 /* ─── Token Scene 3: Glean Index Precision ─── */
 
 .ts3 {
@@ -6200,6 +6210,16 @@
   color: rgba(255, 255, 255, 0.75);
   border-left: 3px solid var(--glean-green);
   padding-left: 16px;
+}
+
+.ts3-hero-line {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--glean-green);
+  text-shadow: 0 0 30px rgba(216, 253, 73, 0.4), 0 0 60px rgba(216, 253, 73, 0.15);
+  letter-spacing: -0.3px;
+  flex-shrink: 0;
 }
 
 /* ─── Token Scene 4: The Math ─── */
