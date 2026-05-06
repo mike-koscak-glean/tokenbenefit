@@ -5725,3 +5725,691 @@
   margin-top: 8px;
   line-height: 1.6;
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   TOKEN EFFICIENCY SCENES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── Token Scene 1: The Question ─── */
+
+.token-scene1 {
+  justify-content: center;
+  gap: 44px;
+}
+
+.ts1-prompt {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  max-width: 800px;
+  width: 100%;
+}
+
+.ts1-prompt-icon {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ts1-prompt-text {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.4;
+}
+
+.ts1-fork-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ts1-fork-svg {
+  width: 100%;
+  height: 200px;
+}
+
+.ts1-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 60px;
+}
+
+.ts1-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.ts1-label-fed {
+  color: var(--glean-orange);
+}
+
+.ts1-label-glean {
+  color: var(--glean-green);
+}
+
+.ts1-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  line-height: 1.4;
+}
+
+/* ─── Token Scene 2: Federated MCP Flood ─── */
+
+.ts2 {
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.ts2-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1100px;
+  flex: 1;
+  min-height: 0;
+}
+
+.ts2-fanout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ts2-prompt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ts2-fan-svg {
+  width: 100%;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.ts2-tools {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ts2-tool {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 126, 76, 0.2);
+}
+
+.ts2-tool .app-icon-sm {
+  width: 28px;
+  height: 28px;
+}
+
+.ts2-flood-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ts2-flood-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ts2-flood-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ts2-token-counter {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--glean-orange);
+  font-variant-numeric: tabular-nums;
+}
+
+.ts2-cost-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--glean-mandarin);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.ts2-context-window {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 126, 76, 0.15);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  overflow: hidden;
+}
+
+.ts2-token-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+}
+
+.ts2-token-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+  height: 38px;
+}
+
+.ts2-token-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ts2-token-noise {
+  background: rgba(255, 126, 76, 0.1);
+  border: 1px solid rgba(255, 126, 76, 0.15);
+  color: rgba(255, 255, 255, 0.35);
+  filter: blur(0.3px);
+}
+
+.ts2-token-relevant {
+  background: rgba(216, 253, 73, 0.15);
+  border: 1px solid rgba(216, 253, 73, 0.4);
+  color: var(--glean-green);
+  box-shadow: 0 0 8px rgba(216, 253, 73, 0.2);
+}
+
+.ts2-token-text {
+  pointer-events: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ts2-fill-track {
+  position: relative;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  overflow: visible;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.ts2-fill-bar {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 126, 76, 0.5), rgba(255, 126, 76, 0.8));
+  border-radius: 5px;
+}
+
+.ts2-fill-signal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--glean-green);
+  border-radius: 5px 0 0 5px;
+  z-index: 1;
+}
+
+.ts2-overflow-badge {
+  position: absolute;
+  right: 0;
+  top: -24px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.15);
+  border: 1px solid rgba(255, 68, 68, 0.4);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.ts2-signal-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.ts2-signal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.ts2-signal-dot-green {
+  background: var(--glean-green);
+}
+
+.ts2-captions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ts2-caption {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  border-left: 3px solid var(--glean-orange);
+  padding-left: 16px;
+}
+
+/* ─── Token Scene 3: Glean Index Precision ─── */
+
+.ts3 {
+  justify-content: center;
+  gap: 16px;
+}
+
+.ts3-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.ts3-prompt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ts3-arrow-down {
+  transform-origin: top center;
+}
+
+.ts3-graph-container {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(216, 253, 73, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.ts3-graph-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(216, 253, 73, 0.6);
+  margin-bottom: 4px;
+}
+
+.ts3-graph-svg {
+  width: 100%;
+  height: 200px;
+}
+
+.ts3-signals {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.ts3-signal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(216, 253, 73, 0.08);
+  border: 1px solid rgba(216, 253, 73, 0.25);
+  color: var(--glean-green);
+}
+
+.ts3-results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ts3-results-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ts3-results-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ts3-token-counter {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--glean-green);
+}
+
+.ts3-result-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ts3-result-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(216, 253, 73, 0.06);
+  border: 1px solid rgba(216, 253, 73, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ts3-result-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--glean-green);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(216, 253, 73, 0.5);
+}
+
+.ts3-fill-track {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.ts3-fill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(216, 253, 73, 0.5), rgba(216, 253, 73, 0.8));
+  border-radius: 5px;
+}
+
+.ts3-captions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ts3-caption {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  border-left: 3px solid var(--glean-green);
+  padding-left: 16px;
+}
+
+/* ─── Token Scene 4: The Math ─── */
+
+.ts4 {
+  justify-content: center;
+  gap: 32px;
+}
+
+.ts4-table {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ts4-header {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ts4-header-label {
+  /* empty spacer */
+}
+
+.ts4-header-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ts4-header-fed {
+  color: var(--glean-orange);
+}
+
+.ts4-header-glean {
+  color: var(--glean-green);
+}
+
+.ts4-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.ts4-row-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ts4-row-icon {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.ts4-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ts4-qualitative {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ts4-qualitative-fed {
+  color: var(--glean-orange);
+}
+
+.ts4-qualitative-glean {
+  color: var(--glean-green);
+}
+
+.ts4-bar-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ts4-bar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.ts4-bar-fed {
+  background: linear-gradient(90deg, rgba(255, 126, 76, 0.4), rgba(255, 126, 76, 0.7));
+}
+
+.ts4-bar-glean {
+  background: linear-gradient(90deg, rgba(216, 253, 73, 0.4), rgba(216, 253, 73, 0.8));
+}
+
+.ts4-tagline {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 600px;
+}
+
+/* ─── Token Scene 5: Takeaway ─── */
+
+.ts5 {
+  justify-content: center;
+  gap: 48px;
+  position: relative;
+}
+
+.ts5-statements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ts5-statement {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.3;
+}
+
+.ts5-statement:nth-child(3) {
+  color: var(--glean-green);
+}
+
+.ts5-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.ts5-pipeline-segment {
+  display: flex;
+  align-items: center;
+}
+
+.ts5-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(216, 253, 73, 0.2);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.ts5-stage-icon {
+  font-size: 24px;
+  color: var(--glean-green);
+}
+
+.ts5-stage-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.ts5-connector {
+  position: relative;
+  width: 60px;
+  height: 2px;
+  margin: 0 4px;
+}
+
+.ts5-connector-line {
+  position: absolute;
+  inset: 0;
+  background: rgba(216, 253, 73, 0.2);
+  border-radius: 1px;
+}
+
+.ts5-dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--glean-green);
+  box-shadow: 0 0 8px rgba(216, 253, 73, 0.6);
+}
+
+.ts5-bg-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(216, 253, 73, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}

@@ -1,19 +1,11 @@
 import { useState, useCallback, useEffect, Component, type ReactNode, type ErrorInfo } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { StepIndicator } from './components/StepIndicator';
-import { Scene0 } from './scenes/Scene0';
-import { Scene1 } from './scenes/Scene1';
-import { SceneFedProblem } from './scenes/SceneFedProblem';
-import { Scene2 } from './scenes/Scene2';
-import { Scene4B1 } from './scenes/Scene4B1';
-import { Scene5 } from './scenes/Scene5';
-import { Scene6 } from './scenes/Scene6';
-import { Scene7 } from './scenes/Scene7';
-import { Scene8 } from './scenes/Scene8';
-import { SceneKnowsData } from './scenes/SceneKnowsData';
-import { SceneKnowsPeople } from './scenes/SceneKnowsPeople';
-import { SceneKnowsProcesses } from './scenes/SceneKnowsProcesses';
-import { Scene9 } from './scenes/Scene9';
+import { TokenScene1 } from './scenes/TokenScene1';
+import { TokenScene2 } from './scenes/TokenScene2';
+import { TokenScene3 } from './scenes/TokenScene3';
+import { TokenScene4 } from './scenes/TokenScene4';
+import { TokenScene5 } from './scenes/TokenScene5';
 import './App.css';
 import './scenes/scenes.css';
 
@@ -43,25 +35,17 @@ class SceneErrorBoundary extends Component<
   }
 }
 
-const TOTAL_STEPS = 13;
+const TOTAL_STEPS = 5;
 
 const STEP_LABELS = [
-  'Question',
-  'Federated',
-  'Fed Problem',
-  'Index',
-  'Search Gap',
-  'Agent + Glean',
-  'MCP + Glean',
-  'Search Win',
-  'Beyond Search',
-  'Knows Your Data',
-  'Knows Your People',
-  'Knows Your Processes',
-  'Full Picture',
+  'The Question',
+  'Federated MCP',
+  'Glean Index',
+  'The Math',
+  'Takeaway',
 ];
 
-const scenes = [Scene0, Scene1, SceneFedProblem, Scene2, Scene4B1, Scene5, Scene6, Scene7, Scene8, SceneKnowsData, SceneKnowsPeople, SceneKnowsProcesses, Scene9];
+const scenes = [TokenScene1, TokenScene2, TokenScene3, TokenScene4, TokenScene5];
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState(0);
