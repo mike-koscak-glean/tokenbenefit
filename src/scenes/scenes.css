@@ -6212,6 +6212,14 @@
   padding-left: 16px;
 }
 
+.ts3-hero-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .ts3-hero-line {
   font-size: 32px;
   font-weight: 800;
@@ -6219,7 +6227,14 @@
   color: var(--glean-green);
   text-shadow: 0 0 30px rgba(216, 253, 73, 0.4), 0 0 60px rgba(216, 253, 73, 0.15);
   letter-spacing: -0.3px;
-  flex-shrink: 0;
+}
+
+.ts3-hero-sub {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.3px;
 }
 
 /* ─── Token Scene 4: The Math ─── */

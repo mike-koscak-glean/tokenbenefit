@@ -236,14 +236,24 @@ export function TokenScene3() {
         </div>
 
         {phase >= 5 && (
-          <motion.div
-            className="ts3-hero-line"
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ type: 'spring', stiffness: 120, damping: 14 }}
-          >
-            Fewer tokens. Better answers.
-          </motion.div>
+          <div className="ts3-hero-group">
+            <motion.div
+              className="ts3-hero-line"
+              initial={{ opacity: 0, scale: 0.85, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 120, damping: 14 }}
+            >
+              Fewer tokens. Better answers.
+            </motion.div>
+            <motion.div
+              className="ts3-hero-sub"
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              Powered by Waldo agentic search model
+            </motion.div>
+          </div>
         )}
       </div>
     </div>
