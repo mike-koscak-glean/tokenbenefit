@@ -24,6 +24,15 @@ export function TokenScene1() {
 
   return (
     <div className="scene token-scene1">
+      <motion.h1
+        className="ts1-header"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Why Glean uses fewer tokens for higher quality results
+      </motion.h1>
+
       <motion.div
         className="ts1-prompt"
         initial={{ opacity: 0, y: 20 }}

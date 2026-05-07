@@ -5735,7 +5735,18 @@
 
 .token-scene1 {
   justify-content: center;
-  gap: 44px;
+  gap: 36px;
+}
+
+.ts1-header {
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--glean-green);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  max-width: 700px;
+  margin: 0;
 }
 
 .ts1-prompt {
